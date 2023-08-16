@@ -2,7 +2,8 @@
 {
   box-sizing: border-box;
   font-family: 'Martian Mono', monospace;
-  font-size: 14;
+  font-size: 12;
+  background-color: rgb(244, 244, 244);
 }
 
 .body {
@@ -37,6 +38,26 @@
   width: 100%;
   margin-bottom: 10px;
   break-inside: avoid;
+}
+
+.description-container .description-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+  margin-right: 150px;
+}
+
+.description-container .description-box ul li {
+  list-style: none;
+  background-color: rgb(242, 242, 242);
+  padding: 1px 1px 1px 1px;
+  margin: 3px 30px 3px 3px;
+  cursor: pointer;
+}
+
+.description-container .description-box ul li.active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(244, 244, 244);
 }
 
 .description-container .description-box img {
@@ -79,6 +100,8 @@
     max-width: 100%;;
   }
 }
+
+
 
 
 
