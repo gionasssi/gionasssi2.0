@@ -3,14 +3,48 @@
   box-sizing: border-box;
   font-family: 'Martian Mono', monospace;
   font-size: 12;
+}
+
+body {
   background-color: rgb(244, 244, 244);
 }
 
-.body {
-  position:absolute;
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
+.popup-image {
+  position: fixed;
+  top:0; left:0;
+  background: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup-image span{
+  font-size: 12x;
+  position: absolute;
+  top:10PX; right: 10px;
+  color: black;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 7px;
+  background-color: rgb(221, 221, 221);
+  padding: 3px 3px 3px 3px;
+  margin: 2px 5px 5px 5px;
+  cursor: pointer;
+}
+
+.popup-image span:hover {
+  background-color: rgb(217, 255, 0);
+}
+
+.popup-image img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  max-height: 97%;
+  max-width: 97%;
+  object-fit: cover;
 }
 
 .container {
@@ -49,10 +83,16 @@
 
 .description-container .description-box ul li {
   list-style: none;
-  background-color: rgb(242, 242, 242);
-  padding: 1px 1px 1px 1px;
-  margin: 3px 30px 3px 3px;
+  border-color: black;
+  border-radius: 7px;
+  background-color: rgb(221, 221, 221);
+  padding: 3px 3px 3px 3px;
+  margin: 2px 5px 5px 5px;
   cursor: pointer;
+}
+
+.description-container .description-box ul li:hover {
+  background-color: rgb(217, 255, 0);
 }
 
 .description-container .description-box ul li.active {
@@ -67,6 +107,13 @@
 .container .box img {
   max-width: 100%;
   border-radius: 10px;
+  object-fit: cover;
+  transition: .1s linear;
+}
+
+.container .box:hover img {
+transform: scale(0.99);
+cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -99,9 +146,13 @@
   .description-container .description-box img {
     max-width: 100%;;
   }
+
+  .description-container .description-box ul {
+    justify-content: center;
+    margin-left: -40px;
+    margin-right: 0px;
+  }
 }
-
-
 
 
 

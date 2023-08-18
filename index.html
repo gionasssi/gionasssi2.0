@@ -23,22 +23,22 @@
                 <li class="list" data-filter="VISUALDESIGN">VISUAL DESIGN</li>
             </ul>
         </div>
-        <div class="description-box">
+        <div class="description-box" id="description">
             <p>
                 GIO(vanni Bo)NASSI 2023<br>
                 From Brescia, in Milan, to the world<br>
-                <br>
-                Mixed archive of work
+             MIXED ARCHIVE OF WORK
+                
             </p>
         </div>
         <div class="description-box">
-            <p>@gionasssi<br>Behance<br>giovanni.bonassi99@gmail.com</p>
+            <p>@gionasssi<br>Behance  Youtube  Spotify<br>giovanni.bonassi99@gmail.com<br>( +39 ) 339 366 7057</p>
         </div>
     </div>
 
     <div class="container">
         <div class="box ILLUSTRATION">
-            <img src="images/_14_01352 copia.jpg" alt="Image 1">
+            <img src="images/collazio.jpg" alt="Image 1">
             <p>01 Descrizione della foto, Descrizione della foto, Descrizione della foto, Descrizione della foto</p>
         </div>
         <div class="box PHOTOGRAPHY">
@@ -69,7 +69,13 @@
             <img src="images/TshirtSession1Retro12.jpg" alt="Image 8">
             <p>08 Descrizione della foto, Descrizione della foto, Descrizione della foto, Descrizione della foto</p>
         </div>
+
         
+  </div>
+
+  <div class="popup-image">
+    <span>CLOSE</span>    
+    <img src="images/collazio.jpg">
     </div>
 
     <script
@@ -78,6 +84,9 @@
   crossorigin="anonymous"></script>
 
   <script type="text/javascript">
+
+    jQuery.fx.off = true;
+
     $(document).ready(function(){
         $('.list').click(function(){
             const value = $(this).attr('data-filter');
@@ -94,6 +103,21 @@
             $(this).addClass('active').siblings().removeClass('active');
         })
     })
+  </script>
+
+  <script>
+    document.querySelectorAll('.container img').forEach(box =>{
+         box.onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = box.getAttribute('src');
+         }
+    });
+
+    document.querySelector('.popup-image span').onclick = () => {
+         document.querySelector('.popup-image').style.display = 'none';
+    }
+
+
   </script>
 
 </body>
